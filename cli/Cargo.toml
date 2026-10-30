@@ -1,0 +1,19 @@
+[package]
+name = "photosync"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "macOS hub and client for photosync"
+
+[[bin]]
+name = "photosync"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+hex = "0.4"
+notify = "6"
+photosync-core = { path = "../core" }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
